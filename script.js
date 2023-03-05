@@ -23,7 +23,7 @@ function createListElement() {
 	div.appendChild(li);
 
 	var b = document.createElement("button");
-	b.appendChild(document.createTextNode("Delete"));
+	b.appendChild(document.createTextNode("X"));
 	b.classList.add("finish");
 	b.addEventListener("click", function() {
         div.remove();

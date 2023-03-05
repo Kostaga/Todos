@@ -1,13 +1,23 @@
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Poppins, Arial;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #27c5c8bd, #4718d5dc);
+
+}
+
 button {
-  border: 1px solid black;
-  font-size: 1em;
-  background-color: rgb(26, 148, 248);
-  border-radius: 5px;
-  padding: 5px 12px;
+  border: 0px solid black;
+  font-size: 1.5em;
+  background-color: rgb(48, 64, 207);
+  border-radius: 50px;
+  padding: 6px 12px;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.159);
   color: white;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin: auto;
   transition: background-color ease-in-out 0.2s;
 }
 
@@ -18,12 +28,13 @@ button:hover {
 
 button:active {
   opacity: 0.5;
-  padding-left: 10px;
 }
 
 li {
-  padding-right: 2rem;
-  font-size: 2em;
+  padding-right: 1rem;
+  font-size: 1.7em;
+  margin: auto;
+  color: rgb(35, 35, 159);
 }
 
 input {
@@ -32,9 +43,72 @@ input {
   outline: none;
   border-top: 0px;
   border-width: 0px 0px 1px 0px;
-  
+  width: 90%;
+  background-color: rgba(174, 174, 174, 0);
 }
 
+::placeholder {
+  color: rgba(75, 107, 204, 0.996);
+}
+
+h1 {
+  font-weight: 500;
+  color: rgba(94, 29, 129, 0.504);
+  filter: blur(0.7px);
+  font-size: 4em;
+  text-decoration: underline;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2em;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  margin: 2vh auto;
+  width: 25%;
+  padding: 10px 35px;
+  height: 70vh;
+  min-width: 280px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.app {
+  color: rgb(242, 243, 242);
+}
+
+.add-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.list {
+  background-color: rgba(248, 247, 247, 0.342);
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.301);
+  padding: 25px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.441);
+  width: 100%;
+}
+
+.finish {
+  background-color: rgb(243, 27, 27); 
+}
+
+.finish:hover {
+  background-color: rgb(150, 12, 12);
+}
 
 .coolTitle {
   text-align: center;
@@ -61,8 +135,8 @@ input {
 }
 
 .item {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(150px, 1fr));
+  margin-top: 10px;
 }
 
