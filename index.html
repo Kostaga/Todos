@@ -4,14 +4,16 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Js + DOM</title>
+	<title>Todo App</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="icon" type="image/x-icon" href="icon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto+Condensed:wght@300;400;700&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
+		<div class="flexbox">
 		<h1>Todo<span class="app">App</span></h1>
 		<h2 id="first">Easy to use Todo-App</h2>
 		<div class="list">
@@ -20,39 +22,10 @@
 				<button id="enter">+</button>
 			</div>
 			<ul id="todos">
-				<div class="item">
-					<li class="task" random="23">NoteBook</li>
-					<button class="check">✓</button>
-					<button class="finish">X</button>
-				</div>
-				<div class="item">
-					<li class="task">Jello</li>
-					<button class="check">✓</button>
-					<button class="finish">X</button>
-				</div>
-				<div class="item">
-					<li class="task">Spinach</li>
-					<button class="check">✓</button>
-					<button class="finish">X</button>
-				</div>
-				<div class="item">
-					<li class="task">Rice</li>
-					<button class="check">✓</button>
-					<button class="finish">X</button>
-				</div>
-				<div class="item">
-					<li class="task">Birthday Cake</li>
-					<button class="check">✓</button>
-					<button class="finish">X</button>
-				</div>
-				<div class="item">
-					<li class="task">Candles</li>
-					<button class="check">✓</button>
-					<button class="finish">X</button>
-				</div>
 			</ul>
 		</div>
 		<button onclick="cleanup()" class="button clear" >Clear</button>
+	</div>
 </div>
 
 

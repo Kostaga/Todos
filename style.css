@@ -77,6 +77,12 @@ h2 {
   min-width: 380px;
 }
 
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .button {
   display: flex;
   flex-direction: column;

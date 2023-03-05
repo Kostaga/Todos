@@ -1,3 +1,4 @@
+//global variables
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
@@ -9,7 +10,7 @@ function inputLength() {
 	return input.value.length;
 }
 
-
+//creates the todo by adding a div, list item and the buttons as well as the listeners required for the buttons to work
 function createListElement() {
 	var div = document.createElement("div");
 	div.classList.add("item");
@@ -50,16 +51,19 @@ function addListAfterClick() {
 	}
 }
 
+//add todo by pressing enter instead of click
 function addListAfterKeypress(event) {
 	if (inputLength() > 0 && event.code === "Enter" ) {
 		createListElement();
 		}
 }
 
+//clears the todos
 function cleanup() {
 	document.getElementById("todos").innerHTML = ' ';
 }
 
+//deletes a to do
 del.forEach(function(item) {
 	item.addEventListener("click",function() {
 		item.parentElement.remove();
