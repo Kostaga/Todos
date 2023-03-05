@@ -1,7 +1,8 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
-var items = document.querySelectorAll("li");
+var items = document.querySelectorAll(".check");
+var li = document.querySelectorAll("li");
 var del = document.querySelectorAll(".finish");
 
 function inputLength() {
@@ -21,6 +22,15 @@ function createListElement() {
 		li.classList.toggle("done");
 	})
 	div.appendChild(li);
+
+	var c = document.createElement("button");
+	c.appendChild(document.createTextNode("✓"));
+	c.classList.add("check");
+	c.addEventListener("click", function() {
+        c.previousElementSibling.classList.toggle("done");
+    })
+
+	div.appendChild(c);
 
 	var b = document.createElement("button");
 	b.appendChild(document.createTextNode("X"));
@@ -46,6 +56,9 @@ function addListAfterKeypress(event) {
 		}
 }
 
+function cleanup() {
+	document.getElementById("todos").innerHTML = ' ';
+}
 
 del.forEach(function(item) {
 	item.addEventListener("click",function() {
@@ -56,10 +69,12 @@ del.forEach(function(item) {
 button.addEventListener("click",addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress);
 
+
 items.forEach(function(item) {
 	item.addEventListener("click", function() {
-		item.classList.toggle("done");
+		item.previousElementSibling.classList.toggle("done");
 	})
 })
+
 
 

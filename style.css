@@ -58,6 +58,7 @@ h1 {
   font-size: 4em;
   text-decoration: underline;
   text-align: center;
+  margin-left: 1rem;
 }
 
 h2 {
@@ -65,6 +66,7 @@ h2 {
   font-size: 2em;
   text-align: center;
   color: white;
+  margin-left: 1.5rem;
 }
 
 .container {
@@ -72,14 +74,14 @@ h2 {
   width: 25%;
   padding: 10px 35px;
   height: 70vh;
-  min-width: 280px;
+  min-width: 380px;
 }
 
 .button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .app {
@@ -97,7 +99,7 @@ h2 {
   text-align: center;
   border: 2px solid rgba(0, 0, 0, 0.301);
   padding: 25px 20px;
-  border-radius: 5px;
+  border-radius: 8px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.441);
   width: 100%;
 }
@@ -106,8 +108,24 @@ h2 {
   background-color: rgb(243, 27, 27); 
 }
 
+.check {
+  background-color: rgb(50, 196, 50);
+}
+
+.check:hover {
+  background-color: rgb(31, 150, 31);
+}
+
 .finish:hover {
   background-color: rgb(150, 12, 12);
+}
+
+.clear {
+  font-size: 2em;
+  padding: 12px 20px;
+  margin-top: 2vh;
+  background-color: rgba(209, 205, 195, 0.292);
+  border-radius: 10px;
 }
 
 .coolTitle {
@@ -136,7 +154,7 @@ h2 {
 
 .item {
   display: grid;
-  grid-template-columns: repeat(2,minmax(150px, 1fr));
+  grid-template-columns: repeat(3,minmax(120px, 150px));
   margin-top: 10px;
 }
 
